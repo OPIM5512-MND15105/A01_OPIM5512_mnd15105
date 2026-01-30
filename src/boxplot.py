@@ -13,12 +13,15 @@ print(df.shape)
 
 # Creat the boxplot
 plt.figure(figsize=(6, 8))
-plt.boxplot(df["MedHouseVal"], vert=True)
+df["MedHouseVal"].plot.box(vert=True)
+plt.xlabel("California Housing Dataset")
 plt.ylabel("Median House Value")
 plt.title("Boxplot of Median House Value (California Housing)")
 
 # Save the figure
-plt.savefig("california_housing_boxplot.png", dpi=300, bbox_inches="tight")
+plt.savefig("figures/california_housing_boxplot.png")
+plt.close()
 
+import matplotlib.pyplot as plt
 # Show plot
 plt.show()
